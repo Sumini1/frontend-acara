@@ -1,6 +1,5 @@
 
-import { Fragment } from 'react';
-import PageHead from '../commons/PageHead/PageHead';
+import PageHead from '@/components/commons/PageHead';
 import { ReactNode } from "react";
 
 interface PropTypes {
@@ -13,10 +12,10 @@ interface PropTypes {
 const AuthLayout = (props: PropTypes) => {
     const { children, title } = props;
     return (
-<Fragment>
+<div className='flex min-h-screen min-w-full flex-col items-center justify-center gap-10 lg:py-0'>
 <PageHead title={title} />
 <section className="max-w-screen-3xl 3xl:container p-6">{children} </section>
-</Fragment>
+</div>
     );
 };
 
